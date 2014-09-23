@@ -1,0 +1,284 @@
+// ==========================================================================
+//
+//  Layout
+//    Primary stylesheet
+//
+// ==========================================================================
+
+
+html {
+	background-color: #fefefe;
+	overflow-x: hidden;
+}
+
+html.no-touch {
+	overflow-y: auto;
+}
+
+body {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	@include clearfix;
+
+	border-top: 24px solid white;
+
+	background: url(/images/bg-loop-slide-1.jpg) no-repeat center top;
+
+	&.admin-bar {
+		padding-top: 32px;
+
+		@include media($mobile-down) {
+			padding-top: 46px;
+		}
+	}
+
+	@include media($mobile-down) {
+		border-top: none;
+		background: none;
+	}
+}
+
+#container {
+	*zoom: 1;
+	margin-left: auto;
+	margin-right: auto;
+	@include clearfix;
+
+	position: relative;
+	width: $large-desktop;
+	height: 780px;
+
+	@include media($mobile-down) {
+		max-width: $mobile;
+		width: auto;
+		height: auto;
+	}
+}
+
+
+// --------------------------------------------------------------------------
+//   Header
+// --------------------------------------------------------------------------
+
+#primary-message {
+	display: none;
+	background: #e2b528;
+	background: rgba(#ffc82e, 0.9);
+	mix-blend-mode: multiply;
+
+	color: white;
+	text-transform: uppercase;
+	text-align: center;
+	font-weight: 600;
+	font-size: 22px;
+	line-height: 1.2;
+
+	padding: 10px;
+
+	@include media($mobile-down) {
+		display: block;
+	}
+}
+
+// --------------------------------------------------------------------------
+//   Main Content
+// --------------------------------------------------------------------------
+
+#main-wrapper {
+	@include span-columns(9.6);
+	@include omega;
+	padding: 20px 0;
+
+	// ----- Mobile ----- //
+
+	@include media($mobile-down) {
+		@include span-columns(4);
+		padding: 20px;
+	}
+}
+
+
+// --------------------------------------------------------------------------
+//   Content
+// --------------------------------------------------------------------------
+
+#content {
+
+}
+
+
+// ----- Home ----- //
+
+.home {
+	text-transform: uppercase;
+
+	.no-mb {
+		margin-bottom: 0;
+	}
+
+	p {
+		margin-bottom: 7px;
+	}
+
+}
+
+
+// --------------------------------------------------------------------------
+//   Sidebar
+// --------------------------------------------------------------------------
+
+#sidebar-wrapper {
+	@include span-columns(2.4);
+	position: relative;
+	height: 100%;
+	background: #e2b528;
+	background: rgba(#ffc82e, 0.9);
+	mix-blend-mode: multiply;
+
+	text-align: center;
+
+	header {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		right: 0;
+		text-align: center;
+
+		@include media($mobile-down) {
+			position: relative;
+			top: auto;
+			padding: 10px 0;
+		}
+	}
+
+
+	// ----- Mobile ----- //
+
+	@include media($mobile-down) {
+		@include span-columns(4);
+		height: auto;
+	}
+}
+
+
+// --------------------------------------------------------------------------
+//  Navigation
+// --------------------------------------------------------------------------
+
+#navigatiopn {
+	padding-top: 50px;
+
+	a {
+		display: block;
+		color: #231f20;
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 2.4;
+		font-weight: 300;
+	}
+
+	@include media($mobile-down) {
+		padding: 10px;
+	}
+}
+
+// --------------------------------------------------------------------------
+//   Footer
+// --------------------------------------------------------------------------
+
+#footer-wrapper {
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	padding-bottom: 25px;
+
+	@include media($mobile-down) {
+		display: none;
+	}
+}
+
+.address {
+	@include span-columns(2.4);
+	padding: 25px 5px 0;
+	text-align: center;
+	color: white;
+	text-transform: uppercase;
+	line-height: 1.1;
+	font-size: 13px;
+	font-weight: 600;
+
+	@include media($mobile-down) {
+		@include span-columns(4);
+	}
+}
+
+.contact {
+	@include span-columns(6.6);
+	text-transform: uppercase;
+
+	h3 {
+		font-size: 16px;
+		color: #6d6e71;
+		font-weight: 500;
+	}
+
+	ul {
+		padding: 0;
+		margin: 0;
+		display: inline-block;
+		list-style: none;
+
+		li {
+			float: left;
+			margin-right: 35px;
+			line-height: 1.4;
+			color: #231f20;
+			font-weight: 500;
+		}
+	}
+
+	@include media($mobile-down) {
+		@include span-columns(4);
+	}
+}
+
+.developer-link {
+	@include span-columns(3);
+	@include omega;
+
+	text-align: right;
+	padding-right: 35px;
+	color: #aa4430;
+	font-size: 14px;
+	font-weight: 500;
+
+	img {
+		vertical-align: text-top;
+		margin-left: 10px;
+	}
+
+	@include media($mobile-down) {
+		@include span-columns(4);
+	}
+}
+
+
+// --------------------------------------------------------------------------
+//  Browse Happy
+// --------------------------------------------------------------------------
+
+.browsehappy {
+	position: absolute;
+	z-index: 9999;
+	max-width: 400px;
+	padding: 30px;
+	left: 50%;
+	margin-left: -200px;
+	top: 100px;
+	text-align: center;
+
+	background: #ffc82e;
+	color: #231f20;
+}

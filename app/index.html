@@ -1,0 +1,116 @@
+<!doctype html>
+<html class="no-js">
+	<head>
+		<meta charset="utf-8">
+		<title>Bloom - Wembley Terrace Homes</title>
+		<meta name="description" content="">
+		<meta name="viewport" content="width=device-width">
+
+		<script src="//use.typekit.net/meu1spq.js"></script>
+		<script>try{Typekit.load();}catch(e){}</script>
+
+		<!-- build:css({.tmp,app}) styles/vendor.css -->
+		<link rel="stylesheet" href="styles/vendor.css">
+		<!-- endbuild -->
+
+		<!-- build:css({.tmp,app}) styles/main.css -->
+		<link rel="stylesheet" href="styles/main.css">
+		<!-- endbuild -->
+
+		<!-- build:js scripts/modernizr.js -->
+		<script src="bower_components/modernizr/modernizr.js"></script>
+		<!-- endbuild -->
+
+		<base href="/">
+
+	</head>
+	<body id="ng-app" ng-app="bloom">
+
+		<!--[if lt IE 10]>
+			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+		<![endif]-->
+
+<!-- 		<div id="splash" ng-cloak>
+
+			<h2>Loading</h2>
+
+		</div> -->
+
+		<div id="container">
+
+			<div id="primary-message">Terrace Homes, Wembley. From $675,000</div>
+
+			<div id="sidebar-wrapper">
+
+				<header>
+					<a href="/"><img src="/images/logo.png" alt="Bloom Logo" id="logo"></a>
+				</header>
+
+				<nav id="navigatiopn">
+					<a activelink href="#/life-at-bloom">Life at Bloom</a>
+					<a activelink href="#/location">Location</a>
+					<a activelink href="#/design-and-plans">Design and Plans</a>
+					<a activelink href="#/the-bloom-story">The Bloom Story</a>
+					<a activelink href="#/developer">Developer</a>
+				</nav>
+
+			</div>
+
+			<div id="main-wrapper" ng-controller="MainController">
+
+				<div class="{{routeClassName}} reveal-animation" ng-view></div>
+
+			</div>
+
+			<footer id="footer-wrapper">
+
+				<div class="address">
+					51 FLYNN STREET, WEMBLEY <br>WESTERN AUSTRALIA
+				</div>
+
+				<div class="contact">
+
+					<h3>Contact Celsius Property</h3>
+
+					<ul>
+						<li>Richard Pappas <br>M 0411 144 230</li>
+						<li>Jane Sinclair <br>M 0419 591 105</li>
+					</ul>
+
+				</div>
+
+				<a href="http://www.giorgigroup.com.au/" class="developer-link">Developed By <img src="/images/logo-giorgi-group.png" alt="Giorgi Group Logo"></a>
+
+			</footer>
+
+		</div>
+
+		<script>
+			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+			function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+			e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+			e.src='//www.google-analytics.com/analytics.js';
+			r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+			ga('create','UA-XXXXX-X');ga('send','pageview');
+		</script>
+
+		<!-- build:js scripts/vendor.js -->
+		<!-- bower:js -->
+		<script src="bower_components/jquery/dist/jquery.js"></script>
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-animate/angular-animate.js"></script>
+		<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+		<script src="bower_components/angular-touch/angular-touch.js"></script>
+		<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+		<script src="bower_components/angular-route/angular-route.js"></script>
+		<!-- endbower -->
+		<!-- endbuild -->
+
+		<!-- build:js({app,.tmp}) scripts/main.js -->
+		<script src="scripts/bloom.js"></script>
+		<!-- inject:partials -->
+		<!-- endinject -->
+		<!-- endbuild -->
+
+	</body>
+</html>
