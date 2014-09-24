@@ -1,4 +1,4 @@
-var app = angular.module('bloom', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngRoute']);
+var app = angular.module('bloom', ['ngAnimate', 'ngCookies', 'ngTouch', 'ngSanitize', 'ngRoute', 'slick']);
 
 app.config(['$routeProvider', '$locationProvider', function ($routeProvider, $locationProvider) {
 'use strict';
@@ -64,14 +64,14 @@ app.animation('.reveal-animation', function() {
 		enter: function(element, done) {
 			element.css('display', 'none');
 			element.css('position', 'relative');
-			element.fadeIn(500, done);
+			element.fadeIn(700, done);
 			return function() {
 				element.stop();
 			}
 		},
 		leave: function(element, done) {
 			element.css('position', 'absolute');
-			element.fadeOut(500, done);
+			element.fadeOut(700, done);
 
 			return function() {
 				element.stop();

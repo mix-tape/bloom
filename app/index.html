@@ -10,7 +10,6 @@
 		<script>try{Typekit.load();}catch(e){}</script>
 
 		<!-- build:css({.tmp,app}) styles/vendor.css -->
-		<link rel="stylesheet" href="styles/vendor.css">
 		<!-- endbuild -->
 
 		<!-- build:css({.tmp,app}) styles/main.css -->
@@ -58,7 +57,9 @@
 
 			<div id="main-wrapper" ng-controller="MainController">
 
-				<div class="{{routeClassName}} reveal-animation" ng-view></div>
+				<a ng-hide="routeClassName == 'home'" href="/"><img src="images/close-panel.png" alt="Close Panel" id="close-panel"></a>
+
+				<div class="{{routeClassName}} reveal-animation" ng-view id="content"></div>
 
 			</div>
 
@@ -103,6 +104,8 @@
 		<script src="bower_components/angular-touch/angular-touch.js"></script>
 		<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
 		<script src="bower_components/angular-route/angular-route.js"></script>
+		<script src="bower_components/slick-carousel/slick/slick.min.js"></script>
+		<script src="bower_components/angular-slick/dist/slick.js"></script>
 		<!-- endbower -->
 		<!-- endbuild -->
 

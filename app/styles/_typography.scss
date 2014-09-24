@@ -23,7 +23,6 @@ body {
 
 a { color: $base-link-color ; text-decoration: none; }
 a:hover, a:focus { color: $link-hover; }
-#content a:hover { text-decoration: underline; }
 
 .button, .product a { text-decoration: none !important; }
 
@@ -54,6 +53,10 @@ p.intro {
 
 .black {
 	color: $base-body-color;
+}
+
+.float-right {
+	float: right;
 }
 
 // --------------------------------------------------------------------------
@@ -218,12 +221,14 @@ table {
 	font-size: 20px;
 	font-weight: 400;
 	padding: 0.2em 0.4em;
-	border: 2px solid #4c4d4f;
+	border: 2px solid $base-body-color;
 	text-decoration: none;
 	text-transform: uppercase;
 
 	&:hover {
 		outline: 0;
+		background: $base-body-color;
+		color: white;
 	}
 
 	&:active, &.active {
