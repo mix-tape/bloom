@@ -80,13 +80,42 @@ app.animation('.reveal-animation', function() {
 	}
 })
 
-app.controller('MainController', ['$scope', '$route', '$location', function($scope, $route, $location) {
+app.controller('MainController', ['$scope', '$route', '$location', '$http', '$q', function($scope, $route, $location, $http, $q) {
 
 	$scope.location = $location.path();
 
 	$scope.$on('$routeChangeSuccess', function(ev,data) {
 		$scope.routeClassName = $route.current.locals.className;
-	})
+	});
+
+	setTimeout(function() {
+		angular.element('body').removeClass('faded');
+	}, 1000);
+
+	$scope.enquiry = {};
+
+	$scope.submitForm = function (isValid) {
+
+		if (isValid) {
+
+			console.log($scope.enquiry);
+
+			$http({
+				method: 'post',
+				url: '/processForm.php',
+				params: $scope.enquiry,
+				headers: {'Content-Type': 'application/x-www-form-urlencoded'}
+			}).success(function (response) {
+				$scope.success = true;
+			}).error(function (response) {
+
+			})
+
+
+		} else {
+			console.log("Whoops, missing something");
+		}
+	}
 
 }]);
 

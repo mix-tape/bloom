@@ -23,17 +23,11 @@
 		<base href="/">
 
 	</head>
-	<body id="ng-app" ng-app="bloom">
+	<body id="ng-app" ng-app="bloom" class="faded">
 
 		<!--[if lt IE 10]>
 			<p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<![endif]-->
-
-<!-- 		<div id="splash" ng-cloak>
-
-			<h2>Loading</h2>
-
-		</div> -->
 
 		<div id="container">
 
@@ -85,6 +79,12 @@
 			</footer>
 
 		</div>
+
+		<slick id="background-slideshow" infinite=true touch-move=false autoplay=true arrows=false pauseOnHover=false speed="1200">
+			<div class="slide" style="background-image: url(/images/bg-loop-slide-1.jpg)"></div>
+			<div class="slide" style="background-image: url(/images/bg-loop-slide-2.jpg)"></div>
+			<div class="slide" style="background-image: url(/images/bg-loop-slide-3.jpg)"></div>
+		</slick>
 
 		<script>
 			(function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

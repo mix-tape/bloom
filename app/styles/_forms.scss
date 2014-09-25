@@ -30,6 +30,12 @@ form {
 	label {
 		font-weight: 600;
 	}
+
+	transition: opacity 1s;
+
+	&.fadeout {
+		opacity: 0;
+	}
 }
 
 // ----- Buttons ----- //

@@ -1,16 +1,24 @@
 <h1 class="hide">Design and Plans</h1>
 <br><br><br><br>
-<h2 class="bold red">Public launch 7th OctOber 2014.</h2>
+<h2 class="bold red">Public launch 7th October 2014.</h2>
 
-<h2 class="big grey "><span class="bold">Pre-launch PrOject information.</span> <br> enquire now to find out more.</h2>
+<h2 class="big grey "><span class="bold">Pre-launch Project information.</span> <br> enquire now to find out more.</h2>
 
-<form>
+<p ng-show="success">Thank you for enquiring.</p>
 
-	<input type="text" placeholder="First Name" name="firstname">
-	<input type="text" placeholder="Last Name" name="lastname">
-	<input type="email" placeholder="Email" name="email">
-	<input type="tel" placeholder="Phone" name="phone">
+<form name="enquiryForm" method="POST" ng-class="{fadeout: success}" ng-submit="submitForm(enquiryForm.$valid)">
 
-	<button type="submit" class="submit">Submit</button>
+	<input ng-required="true" ng-model="enquiry.firstname" type="text" placeholder="First Name" name="firstname" required>
+	<p ng-show="enquiryForm.firstname.$invalid && tried" class="help-block">Your first name is required.</p>
+	<input ng-required="true" ng-model="enquiry.lastname" type="text" placeholder="Last Name" name="lastname" required>
+	<p ng-show="enquiryForm.lastname.$invalid && tried" class="help-block">Your last name is required.</p>
+	<input ng-required="true" ng-model="enquiry.email" type="email" placeholder="Email" name="email">
+	<p ng-show="enquiryForm.email.$invalid && tried" class="help-block">Your email address is required.</p>
+	<input ng-required="true" ng-model="enquiry.phone" type="tel" placeholder="Phone" name="phone" required>
+	<p ng-show="enquiryForm.phone.$invalid && tried" class="help-block">Your phone number is required.</p>
+
+	<button type="submit" class="submit" ng-click="tried = true">Submit</button>
+
 
 </form>
+
